@@ -1,0 +1,41 @@
+Ganar o empatar al empezar primero
+**********************************
+
+1
+Coloca la primera X en una esquina. Los jugadores más experimentados colocan la primera “X” en una esquina cada vez que empiezan primero. 
+Esto le da al oponente mayor oportunidad para cometer un error. 
+Si tu oponente responde colocando una O en cualquier parte que no sea el centro, tienes una victoria garantizada
+
+
+2
+Si tu oponente juega su primera O en el centro, debes esperar a que cometa otro error antes de poder ganar. Si continúa jugando correctamente, el juego terminará en empate. 
+Estas son dos opciones para tu segunda jugada, seguidas de instrucciones acerca de cómo ganar si tu oponente hace determinados movimientos 
+(si no los hace, sigue bloqueando sus jugadas y el juego terminará en empate):
+Coloca la segunda X en la esquina opuesta a la primera, de modo que haya una línea vista como “X O X” en diagonal a lo largo del tablero. 
+Si tu oponente responde con una O en una de las esquinas restantes, 
+¡habrás ganado![2] Coloca la tercera X en la última esquina vacía y tu oponente no podrá impedir que ganes colocando una cuarta.
+O, puedes colocar la segunda X en una casilla del borde (no en la esquina), sin tocar la primera X. 
+Si tu oponente coloca una O en la esquina que no está al lado de dicha X, puedes usar la tercera para bloquear su movimiento y ganar automáticamente al colocar una cuarta X.
+
+3
+Gana automáticamente si tu oponente juega su primera O en cualquier casilla que no sea la del centro. 
+Si tu oponente coloca su primera O en cualquier casilla que no sea la del centro, puedes ganar. 
+Responde colocando tu segunda X en cualquier otra esquina, con un espacio vacío entre ambas X.
+Por ejemplo, supongamos que colocas la primera X en la casilla superior izquierda y tu oponente coloca una O en la casilla superior media. 
+Puedes colocar la segunda X en la esquina inferior izquierda o derecha. 
+No la coloques en la esquina superior derecha, ya que habría una O entre ambas X en lugar de un espacio vacío.
+
+4
+Coloca la tercera X de modo que tengas dos posibles movimientos para ganar. La mayor parte del tiempo, tu oponente verá que tienes dos X en una fila y te bloqueará 
+(si no lo hace, simplemente gana formando una fila de X). 
+Después de que esto ocurra, debe haber una casilla vacía alineada con tus dos primeras X y sin ninguna O bloqueándola. 
+Coloca la tercera X en esa casilla.
+
+Por ejemplo, toma un pedazo de papel y dibuja un tablero de tres en raya con la fila superior "X O _", la fila intermedia "O _ _" y la inferior "X _ _". 
+Si colocas la tercera X en la esquina inferior derecha, estará alineada con las otras dos X.
+
+5
+Gana colocando la cuarta X. Después de colocar la tercera X, hay dos casillas vacías que te harán ganar el juego si colocas una X en una de ellas. 
+Dado que tu oponente solo puede hacer una jugada, únicamente puede bloquear una de esas casillas. 
+¡Escribe la cuarta X en la casilla que no bloqueó y gana el juego!
+
