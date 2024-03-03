@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/juego-gato_humano-vs-bot/static/css/main.3e2e03c0.css",
+    "main.js": "/juego-gato_humano-vs-bot/static/js/main.61a69c6f.js",
+    "static/js/508.3fd27bbc.chunk.js": "/juego-gato_humano-vs-bot/static/js/508.3fd27bbc.chunk.js",
+    "static/js/592.cd4b13e3.chunk.js": "/juego-gato_humano-vs-bot/static/js/592.cd4b13e3.chunk.js",
+    "static/media/botPensando.wav": "/juego-gato_humano-vs-bot/static/media/botPensando.191d6d8b6b5a3d911095.wav",
+    "static/media/humanoGanadorFondo.wav": "/juego-gato_humano-vs-bot/static/media/humanoGanadorFondo.276826a0cf497be6d2b1.wav",
+    "static/media/clickHumano2.wav": "/juego-gato_humano-vs-bot/static/media/clickHumano2.cc3fd90413809227ad01.wav",
+    "static/media/humanoGanador.m4a": "/juego-gato_humano-vs-bot/static/media/humanoGanador.a73468c2e358d25218e5.m4a",
+    "static/media/botNuncaPierde.m4a": "/juego-gato_humano-vs-bot/static/media/botNuncaPierde.bae17a61672060211213.m4a",
+    "static/media/botGanador.m4a": "/juego-gato_humano-vs-bot/static/media/botGanador.356ad1941a16375c4680.m4a",
+    "static/media/clickBot2.wav": "/juego-gato_humano-vs-bot/static/media/clickBot2.9112fe965380d1efd6c1.wav",
+    "static/media/clickHumano.wav": "/juego-gato_humano-vs-bot/static/media/clickHumano.a696572082618f64d2a4.wav",
+    "static/media/clickBot.wav": "/juego-gato_humano-vs-bot/static/media/clickBot.364689a2220a6ae46cb3.wav",
+    "static/media/movimientoNoValido.wav": "/juego-gato_humano-vs-bot/static/media/movimientoNoValido.427fd30cda2eca743c9e.wav",
+    "index.html": "/juego-gato_humano-vs-bot/index.html",
+    "main.3e2e03c0.css.map": "/juego-gato_humano-vs-bot/static/css/main.3e2e03c0.css.map",
+    "main.61a69c6f.js.map": "/juego-gato_humano-vs-bot/static/js/main.61a69c6f.js.map",
+    "508.3fd27bbc.chunk.js.map": "/juego-gato_humano-vs-bot/static/js/508.3fd27bbc.chunk.js.map",
+    "592.cd4b13e3.chunk.js.map": "/juego-gato_humano-vs-bot/static/js/592.cd4b13e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e2e03c0.css",
+    "static/js/main.61a69c6f.js"
+  ]
+}
