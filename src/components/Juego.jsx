@@ -22,7 +22,6 @@ const Juego = () =>  {
   // const [dificultad, setDificultad] = useState("🐓");
   const [dificultad, setDificultad] = useState("🐣");
 
-
   const handleClickInicia = (inicia) =>{
     setQuienInicia(inicia);
   };
@@ -39,6 +38,7 @@ const Juego = () =>  {
   }
 
   function jumpTo(nextMove) {
+    (currentMove % 2 === 0) ? setQuienJuega("🤖") : setQuienJuega("😎");
     setCurrentMove(nextMove);
     setFromHistory(true);
   }
@@ -57,13 +57,18 @@ const Juego = () =>  {
     );
   });
 
+  const reiniciarJuego = () => {
+    window.location.reload(false);
+  }
+
 
 
   return (
     <div>
         <header>
-          <h1>Gánale a Bot!</h1>
+            <h1>Gánale a Bot!</h1>
         </header>
+
 
         {/* <section>
           <Configuracion setJugarContraBot = {setJugarContraBot} setQuienInicia = {handleClickInicia}  setDificultad = {handleClickDificultad} />
@@ -85,10 +90,9 @@ const Juego = () =>  {
           </div>
         </div>
 
-        <footer>
-          <h3>Pie de página</h3>
-
-        </footer>
+        {/* <footer>
+          <p>desarrollado por Luis Bugueño Ulloa!</p>
+        </footer> */}
     </div>      
   );
 };

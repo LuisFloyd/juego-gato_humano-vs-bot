@@ -1,3 +1,4 @@
+import obtenerNumeroEnteroAlAzarEntre from "./obtenerNumeroEnteroAlAzarEntre";
 const juegaBot = (squares, dificultad) => {
     let cuadradoLibre = -1;
     const hayCuadradoLibre = () => {
@@ -21,16 +22,14 @@ const juegaBot = (squares, dificultad) => {
     let bordesArray = [1, 3, 5, 7];
     let centroArray = [4];
 
-    const tresEnLineaArray = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-        ];
+    const tresEnLineaArray = [  [0, 1, 2],
+                                [3, 4, 5],
+                                [6, 7, 8],
+                                [0, 3, 6],
+                                [1, 4, 7],
+                                [2, 5, 8],
+                                [0, 4, 8],
+                                [2, 4, 6]];
 
     const cuadradosHumanoArray = [];
     const posiblesTresEnLineaHumano = [];
@@ -87,15 +86,9 @@ const juegaBot = (squares, dificultad) => {
         });
     }
 
-    function getRandomIntInclusive(min, max) {
-        const minCeiled = Math.ceil(min);
-        const maxFloored = Math.floor(max);
-        return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
-    }
-
     const eligeEsquinaCualquiera = () => {
         do {
-            cuadradoSeleccionado = getRandomIntInclusive(0, 8)
+            cuadradoSeleccionado = obtenerNumeroEnteroAlAzarEntre(0, 8)
         } while (!(esquinasArray.includes(cuadradoSeleccionado)) || squares[cuadradoSeleccionado])
     }
     const eligeEsquinaContiguaDelHumano = () => {
@@ -121,9 +114,21 @@ const juegaBot = (squares, dificultad) => {
     }
     const eligeBordeCualquiera = () => {
         do {
-            cuadradoSeleccionado = getRandomIntInclusive(0, 8)
+            cuadradoSeleccionado = obtenerNumeroEnteroAlAzarEntre(1, 7);
+            if (bordesArray.includes(cuadradoSeleccionado)){
+                if (cuadradoSeleccionado === 1 || cuadradoSeleccionado === 7){
+                    if ((squares[1]) || (squares[7])){
+                        cuadradoSeleccionado = -1
+                    }
+                }
+                else 
+                if (cuadradoSeleccionado === 3 || cuadradoSeleccionado === 5){
+                    if ((squares[3]) || (squares[5])){
+                        cuadradoSeleccionado = -1
+                    }
+                }
+            }
         } while (!(bordesArray.includes(cuadradoSeleccionado)) || (squares[cuadradoSeleccionado]))
-
     }
     const eligeCuadradoCentral = () => {
         cuadradoSeleccionado = 4;
@@ -158,7 +163,7 @@ const juegaBot = (squares, dificultad) => {
     if (dificultad === "🐣"){
         if (numeroJugadaBot === 1){
             if (numeroJugadasHumano === 0){/*quiere decir que bot empezó el juego*/
-                if (getRandomIntInclusive(0, 1) === 0 || getRandomIntInclusive(0, 1) === 1) {/*basta que uno sea true para que elija alguna esquina*/
+                if (obtenerNumeroEnteroAlAzarEntre(0, 1) === 0 || obtenerNumeroEnteroAlAzarEntre(0, 1) === 1) {/*basta que uno sea true para que elija alguna esquina*/
                         eligeEsquinaCualquiera();
                 }
                 else{/*va al cuadrado central! (para dar oportunidad de que gane un niño)*/
@@ -187,6 +192,9 @@ const juegaBot = (squares, dificultad) => {
                         };
                     }
                     if (cuadradoSeleccionado === -1){
+                        eligeEsquinaContiguaDelHumano();
+                    }
+                    if (cuadradoSeleccionado === -1){
                         eligeEsquinaCualquiera();
                     }
                 }
@@ -201,7 +209,9 @@ const juegaBot = (squares, dificultad) => {
                 cuadradoSeleccionado = bloquearGatoArray[0];                    
             }
             else{
-                cuadradoSeleccionado = cuadradoLibre;
+                eligeEsquinaContiguaDelHumano();
+
+                if (cuadradoSeleccionado === -1) cuadradoSeleccionado = cuadradoLibre;
             }
         }        
         return cuadradoSeleccionado;    

@@ -18,6 +18,8 @@ import humanoGanadorFondo from "../assets/audio/humanoGanadorFondo.wav";
 
 function Tablero({ quienJuega, setQuienJuega, squares, onPlay, fromHistory, jugarContraBot, dificultad }) {
   // function Tablero({ xIsNext, squares, onPlay, fromHistory, jugarContraBot, quienInicia, dificultad}) {
+  // console.log(quienJuega)
+  
   const [playBotGanador] = useSound(botGanador);
   const [playBotPensando] = useSound(botPensando);
   const [playBotNuncaPierde] = useSound(botNuncaPierde);
@@ -48,7 +50,6 @@ function Tablero({ quienJuega, setQuienJuega, squares, onPlay, fromHistory, juga
       return;
     }
     playclickHumano2()
-
     const nextSquares = squares.slice();
     quienJuega === "😎" ? setQuienJuega("🤖") : setQuienJuega("😎")
     nextSquares[i] = quienJuega;
@@ -61,7 +62,7 @@ function Tablero({ quienJuega, setQuienJuega, squares, onPlay, fromHistory, juga
 
   let status;
   if (winner) {
-    status = "El ganador es: " + winner;
+    status = "Ganador: " + winner;
     if (winner === "🤖"){
       playBotPensando();
       playBotGanador();    
@@ -81,20 +82,31 @@ function Tablero({ quienJuega, setQuienJuega, squares, onPlay, fromHistory, juga
   }
 
   if (quienJuega === "🤖" && !fromHistory){
+    // setTimeout(()=>movimientoBot(), 400);
     movimientoBot();
+  }
+
+  const reiniciarJuego = () => {
+    window.location.reload(false);
   }
 
   return (
     <>
-      <div
-        className={ ` ${"status"}
-                      ${winner ? "statusWinner" : ''}
-                      ${!winner && empate ? "statusEmpate" : ''}
-                    `// ejemplo de classname concatenado o concatenación de estilos
-                  } 
-      >
-        {status}
-      </div>
+      <section className="sectionReiniciar_y_Status">
+        <div className="divReiniciar">
+          <button className="btnReiniciar" onClick={reiniciarJuego}>🔃</button>
+        </div>
+      
+        <div
+          className={ ` ${"status"}
+                        ${winner ? "statusWinner" : ''}
+                        ${!winner && empate ? "statusEmpate" : ''}
+                      `// ejemplo de classname concatenado o concatenación de estilos
+                    } 
+        >
+          {status}
+        </div>
+      </section>
 
       <div className="board-row">
         <Square
