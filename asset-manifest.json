@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/juego-gato_humano-vs-bot/static/css/main.0e3e5033.css",
-    "main.js": "/juego-gato_humano-vs-bot/static/js/main.3318aaa7.js",
+    "main.js": "/juego-gato_humano-vs-bot/static/js/main.adcd5924.js",
     "static/js/508.3fd27bbc.chunk.js": "/juego-gato_humano-vs-bot/static/js/508.3fd27bbc.chunk.js",
     "static/js/592.cd4b13e3.chunk.js": "/juego-gato_humano-vs-bot/static/js/592.cd4b13e3.chunk.js",
     "static/media/botPensando.wav": "/juego-gato_humano-vs-bot/static/media/botPensando.191d6d8b6b5a3d911095.wav",
@@ -16,12 +16,12 @@
     "static/media/movimientoNoValido.wav": "/juego-gato_humano-vs-bot/static/media/movimientoNoValido.427fd30cda2eca743c9e.wav",
     "index.html": "/juego-gato_humano-vs-bot/index.html",
     "main.0e3e5033.css.map": "/juego-gato_humano-vs-bot/static/css/main.0e3e5033.css.map",
-    "main.3318aaa7.js.map": "/juego-gato_humano-vs-bot/static/js/main.3318aaa7.js.map",
+    "main.adcd5924.js.map": "/juego-gato_humano-vs-bot/static/js/main.adcd5924.js.map",
     "508.3fd27bbc.chunk.js.map": "/juego-gato_humano-vs-bot/static/js/508.3fd27bbc.chunk.js.map",
     "592.cd4b13e3.chunk.js.map": "/juego-gato_humano-vs-bot/static/js/592.cd4b13e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e3e5033.css",
-    "static/js/main.3318aaa7.js"
+    "static/js/main.adcd5924.js"
   ]
 }
