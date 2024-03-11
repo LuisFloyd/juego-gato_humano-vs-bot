@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Tablero from "./Tablero";
-import Configuracion from "./Configuracion";
+
+// import BarraHistorial from "./BarraHistorial";
+// import Configuracion from "./Configuracion";
 import styles from "../assets/css/styles.css";
 
 const Juego = () =>  {
@@ -38,9 +40,11 @@ const Juego = () =>  {
   }
 
   function jumpTo(nextMove) {
-    (currentMove % 2 === 0) ? setQuienJuega("🤖") : setQuienJuega("😎");
+    // (currentMove % 2 === 0) ? setQuienJuega("🤖") : setQuienJuega("😎");
+    (nextMove % 2 === 0) ? setQuienJuega("😎") : setQuienJuega("🤖");
     setCurrentMove(nextMove);
     setFromHistory(true);
+    (nextMove === 0) && reiniciarJuego();
   }
 
   const moves = history.map((squares, move) => {
@@ -86,6 +90,7 @@ const Juego = () =>  {
 
           <div className="game-info">
             <h2>Historial de movimientos</h2>
+            {/* <BarraHistorial/> */}
             <ol>{moves}</ol>
           </div>
         </div>
